@@ -2,8 +2,6 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-
-    <!-- ESSENCIAL PARA CELULAR -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Essence | Ateliê de Moda</title>
@@ -36,7 +34,6 @@
         header p {
             font-size: 18px;
             margin-top: 10px;
-            letter-spacing: 1px;
         }
 
         section {
@@ -50,12 +47,6 @@
             color: #5a3e36;
         }
 
-        .sobre p {
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 800px;
-        }
-
         .galeria {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -66,17 +57,10 @@
             background-color: #fff;
             border: 2px solid #e0d1c8;
             border-radius: 12px;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
-            transition: transform 0.3s;
-            position: relative;
         }
 
-        .card:hover {
-            transform: scale(1.03);
-        }
-
-        /* PADRÃO DAS IMAGENS */
         .card img {
             width: 100%;
             height: 500px;
@@ -84,33 +68,34 @@
             border-radius: 10px;
         }
 
-        /* 🔥 CARD DA PROPRIETÁRIA 🔥 */
-        .card.proprietaria img {
+        /* 🌸 CARD DA PROPRIETÁRIA */
+        .owner-card img {
             height: auto;
+            aspect-ratio: 1 / 1;
             object-fit: contain;
-            background-color: #f3ede8;
+            background: #f3ebe6;
         }
 
-        .badge {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: rgba(90, 62, 54, 0.85);
-            color: #fff;
-            padding: 6px 14px;
-            border-radius: 20px;
+        .owner-tag {
+            background-color: #d6c3b8;
+            color: #5a3e36;
+            padding: 6px 10px;
+            border-radius: 6px;
             font-size: 13px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .owner-name {
             font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #5a3e36;
+            margin-top: 10px;
         }
 
         .contato {
             background-color: #e9dcd4;
             border-top: 6px solid #d6c3b8;
-        }
-
-        .contato p {
-            font-size: 16px;
-            margin: 8px 0;
         }
 
         footer {
@@ -120,32 +105,35 @@
             font-size: 18px;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        /* 📱 MOBILE */
+        @media (max-width: 768px) {
+            header h1 { font-size: 34px; }
+            section { padding: 40px 6%; }
+            .card img { height: 220px; }
+            .owner-card img { height: auto; }
         }
 
-        /* 🔽 AJUSTES PARA CELULAR 🔽 */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 34px;
-            }
+        /* 💬 BOTÃO WHATSAPP */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #fff;
+            padding: 14px 18px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            z-index: 1000;
+        }
 
-            header p {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 40px 6%;
-            }
-
-            .card img {
-                height: 220px;
-            }
-
-            .card.proprietaria img {
-                height: auto;
-            }
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -157,34 +145,24 @@
     <p>Ateliê de Moda & Essência Feminina</p>
 </header>
 
-<section class="sobre">
-    <h2>Sobre o Ateliê</h2>
-    <p>
-        O <strong>Essence</strong> é um ateliê de roupas autorais dedicado à criação de peças elegantes,
-        delicadas e cheias de identidade.
-    </p>
-    <p>
-        Fundado e dirigido por <strong>Renata Costa</strong>.
-    </p>
-</section>
-
 <section>
     <h2>Coleções</h2>
 
     <div class="galeria">
 
         <div class="card">
-            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/atfb9-y4ugc.png" alt="">
+            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/atfb9-y4ugc.png">
         </div>
 
         <div class="card">
-            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/ay8jd-5am41.png" alt="">
+            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/ay8jd-5am41.png">
         </div>
 
-        <!-- 🌸 PROPRIETÁRIA 🌸 -->
-        <div class="card proprietaria">
-            <span class="badge">Proprietária — Renata Costa</span>
-            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/aele3-t5omb.png" alt="">
+        <!-- 🌸 PROPRIETÁRIA -->
+        <div class="card owner-card">
+            <span class="owner-tag">Proprietária & Costureira</span>
+            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/aele3-t5omb.png">
+            <div class="owner-name">Renata Costa</div>
         </div>
 
     </div>
@@ -199,6 +177,11 @@
 <footer>
     © 2026 Essence Ateliê — Moda com identidade
 </footer>
+
+<!-- 💬 BOTÃO FLUTUANTE -->
+<a href="https://wa.me/5522974062530" class="whatsapp-btn" target="_blank">
+    💬 Fale conosco
+</a>
 
 </body>
 </html>
