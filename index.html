@@ -2,6 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+
+    <!-- LINHA ESSENCIAL PARA CELULAR -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Essence | Ateliê de Moda</title>
 
     <!-- Google Fonts -->
@@ -78,11 +82,6 @@
             border-radius: 10px;
         }
 
-        .card p {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
         .contato {
             background-color: #e9dcd4;
             border-top: 6px solid #d6c3b8;
@@ -104,8 +103,28 @@
             text-decoration: none;
             color: inherit;
         }
+
+        /* 🔽 AJUSTES PARA CELULAR 🔽 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 40px 6%;
+            }
+
+            .card img {
+                height: 220px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -117,47 +136,29 @@
     <h2>Sobre o Ateliê</h2>
     <p>
         O <strong>Essence</strong> é um ateliê de roupas autorais dedicado à criação de peças elegantes,
-        delicadas e cheias de identidade. Cada criação é pensada para valorizar a essência,
-        o conforto e a beleza de quem veste.
+        delicadas e cheias de identidade.
     </p>
     <p>
-        Fundado e dirigido por <strong>Renata Costa</strong>, o ateliê une design artesanal,
-        acabamento cuidadoso e sensibilidade estética.
+        Fundado e dirigido por <strong>Renata Costa</strong>.
     </p>
 </section>
+
+<section>
     <h2>Coleções</h2>
 
     <div class="galeria">
 
-        <!-- CARD 1 -->
-        <a href="LINK_DA_ROUPA_1" target="_blank">
-            <div class="card">
-                <img src="https://s10.aconvert.com/convert/p3r68-cdx67/atfb9-y4ugc.png" alt="Peça Essence 1">
-                <p>Vestido para Apresentaçao de balé – Coleção Essência</p>
-            </div>
-        </a>
+        <div class="card">
+            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/atfb9-y4ugc.png" alt="">
+        </div>
 
-        <!-- CARD 2 -->
-        <a href="LINK_DA_ROUPA_2" target="_blank">
-            <div class="card">
-                <img src="https://s10.aconvert.com/convert/p3r68-cdx67/ay8jd-5am41.png" alt="Peça Essence 2">
-               <p>Conjunto exclusivo –  Moderno cinza a medida</p>
-                
-         <!-- CARD 3 -->
-            </div>
-        </a>
-            
-            <h2>Proprietária e
-            costureira profissional</h2>
- <strong> Renata Costa</p>
-        <!-- CARD 3 -->
-        <a href="LINK_DA_ROUPA_3" target="_blank">
-            <div class="card">
-                <img src="https://s10.aconvert.com/convert/p3r68-cdx67/aele3-t5omb.png" alt=""> 
-                     
+        <div class="card">
+            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/ay8jd-5am41.png" alt="">
+        </div>
 
-    
-            </div>
+        <div class="card">
+            <img src="https://s10.aconvert.com/convert/p3r68-cdx67/aele3-t5omb.png" alt="">
+        </div>
 
     </div>
 </section>
@@ -166,12 +167,11 @@
     <h2>Contato</h2>
     <p><strong>Telefone / WhatsApp:</strong> (22) 97406-2530</p>
     <p><strong>Localização:</strong> Rio das Ostras – RJ</p>
-    <p><strong>Atendimento:</strong> Sob agendamento</p>
 </section>
 
 <footer>
-    © 2026 Essence Ateliê -- Moda com identidade
+    © 2026 Essence Ateliê — Moda com identidade
 </footer>
 
 </body>
-        </html>
+</html>
